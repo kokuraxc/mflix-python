@@ -61,7 +61,7 @@ def api_search_movies():
     search = request.args.get('text')
     if search:
         filters["text"] = search
-        return_filters["search"] = search
+        return_filters["text"] = search
 
     # finally use the database and get what is necessary
     (movies, total_num_entries) = get_movies(
